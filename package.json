@@ -6,8 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint && npm version patch",
+    "prepublishOnly": "npm test && npm run lint && npm version patch",
+    "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "build": "tsc",

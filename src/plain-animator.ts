@@ -6,7 +6,7 @@ export class PlainAnimator {
   protected currentFrameDisplayTime: number = 0;
   protected currentFrame: number = 0;
   protected clock: Clock = new Clock();
-  protected _end$: Subject<any> = new Subject<any>();
+  protected end$: Subject<any> = new Subject<any>();
   protected readonly frameDisplayDuration: number;
 
   constructor(
@@ -37,15 +37,15 @@ export class PlainAnimator {
     while (this.currentFrameDisplayTime > this.frameDisplayDuration) {
       this.currentFrameDisplayTime -= this.frameDisplayDuration;
       if (this.currentFrame === this.tilesTotalAmount) {
-        this._end$.next();
+        this.end$.next();
       }
       this.currentFrame = this.currentFrame < this.tilesTotalAmount ? this.currentFrame + 1 : 0;
       this.updateTexture();
     }
   }
 
-  public get end$(): Observable<any> {
-    return this._end$.asObservable();
+  public get end(): Observable<any> {
+    return this.end$.asObservable();
   }
 
   protected updateTexture() {

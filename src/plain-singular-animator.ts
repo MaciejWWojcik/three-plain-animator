@@ -1,6 +1,6 @@
 import { PlainAnimator } from './plain-animator';
-import { Texture } from 'three';
 import { take } from 'rxjs/operators';
+import { Texture } from 'three';
 
 export class PlainSingularAnimator extends PlainAnimator {
 
@@ -29,7 +29,7 @@ export class PlainSingularAnimator extends PlainAnimator {
       }
       this.updateTexture();
       if (this.currentFrame === this.tilesTotalAmount) {
-        this._end$.next(true);
+        this.end$.next(true);
         return;
       }
     }

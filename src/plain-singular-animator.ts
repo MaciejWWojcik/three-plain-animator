@@ -1,6 +1,6 @@
-import { PlainAnimator } from './plain-animator';
 import { take } from 'rxjs/operators';
 import { Texture } from 'three';
+import { PlainAnimator } from './plain-animator';
 
 export class PlainSingularAnimator extends PlainAnimator {
 

@@ -1,0 +1,44 @@
+{
+  "name": "three-plain-animator",
+  "version": "1.0.0",
+  "description": "package for threejs to support plain animations from sprite textures",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaciejWWojcik/three-plain-animator.git"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "animation",
+    "sprite",
+    "animations"
+  ],
+  "author": "Maciej Wójcik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaciejWWojcik/three-plain-animator/issues"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/MaciejWWojcik/three-plain-animator#readme",
+  "devDependencies": {
+    "prettier": "^1.17.0",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.4"
+  }
+}

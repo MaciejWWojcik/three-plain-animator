@@ -1,6 +1,6 @@
 {
   "name": "three-plain-animator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package for threejs to support plain animations from sprite textures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

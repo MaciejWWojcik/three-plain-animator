@@ -2,7 +2,6 @@ import { Observable, Subject } from 'rxjs';
 import { Clock, RepeatWrapping, Texture } from 'three';
 
 export class PlainAnimator {
-
   protected currentFrameDisplayTime: number = 0;
   protected currentFrame: number = 0;
   protected clock: Clock = new Clock();
@@ -55,6 +54,6 @@ export class PlainAnimator {
     const currentRow = Math.floor(this.currentFrame / this.tilesAmountHorizontally);
 
     this.texture.offset.x = currentColumn / this.tilesAmountHorizontally;
-    this.texture.offset.y = 1 - (currentRow / this.tilesAmountVertically) - tileHeight;
+    this.texture.offset.y = 1 - currentRow / this.tilesAmountVertically - tileHeight;
   }
 }

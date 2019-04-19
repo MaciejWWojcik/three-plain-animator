@@ -3,8 +3,13 @@ import { Texture } from 'three';
 import { PlainAnimator } from './plain-animator';
 
 export class PlainSingularAnimator extends PlainAnimator {
-
-  constructor(texture: Texture, tilesAmountHorizontally: number, tilesAmountVertically: number, tilesTotalAmount: number, framesPerSecond: number) {
+  constructor(
+    texture: Texture,
+    tilesAmountHorizontally: number,
+    tilesAmountVertically: number,
+    tilesTotalAmount: number,
+    framesPerSecond: number,
+  ) {
     super(texture, tilesAmountHorizontally, tilesAmountVertically, tilesTotalAmount, framesPerSecond);
   }
 
@@ -15,7 +20,10 @@ export class PlainSingularAnimator extends PlainAnimator {
       requestId = requestAnimationFrame(animation);
     };
     requestId = requestAnimationFrame(animation);
-    this.end$.pipe(take(1)).toPromise().then(() => cancelAnimationFrame(requestId));
+    this.end$
+      .pipe(take(1))
+      .toPromise()
+      .then(() => cancelAnimationFrame(requestId));
   }
 
   public animate(timestamp?: number): void {
@@ -34,5 +42,4 @@ export class PlainSingularAnimator extends PlainAnimator {
       }
     }
   }
-
 }

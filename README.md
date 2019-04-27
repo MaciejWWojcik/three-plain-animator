@@ -23,7 +23,7 @@ There are two main classes to work with:
 
 ## Example
 
-The simple with Homer Simpson animated [gif for reference](https://ui-ex.com/images/transparent-gifs-simpson-2.gif)
+This is a simple example with Homer Simpson animation [gif for reference](https://ui-ex.com/images/transparent-gifs-simpson-2.gif).
 I assume that creating a basic scene using threejs is not a part of this example. So I will show only unnecessary code just to not mess around.
 
 I converted gif to sprite and uploaded this on imgur. 

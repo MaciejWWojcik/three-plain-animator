@@ -5,6 +5,7 @@ Three-Plain-Animator is a package for threejs developers to support 2D animation
 [![npm version](https://badge.fury.io/js/three-plain-animator.svg)](https://badge.fury.io/js/three-plain-animator)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
+![Example](https://media.giphy.com/media/U4SiHrxyAzYqmJ65Ly/giphy.gif)
 
 ## Installation
 

@@ -5,8 +5,7 @@
 # IntelliJ project files
 .idea
 *.iml
-out
 gen
-/package-lock.json
 /node_modules
 /lib
+*/dist/

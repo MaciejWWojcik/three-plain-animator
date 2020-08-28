@@ -5,20 +5,20 @@ Three-Plain-Animator is a package for threejs developers to support 2D animation
 [![npm version](https://badge.fury.io/js/three-plain-animator.svg)](https://badge.fury.io/js/three-plain-animator)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-![Example](https://media.giphy.com/media/U4SiHrxyAzYqmJ65Ly/giphy.gif)
+![Example](https://media.giphy.com/media/cL5HGzoR4TAXvPrTX6/giphy.gif)
 
 ## Installation
 
-The package is available on npm: [three-plain-animator](https://www.npmjs.com/package/three-plain-animator)
-To install the latest stable version type this in your project's root directory:
+The package is available via npm: [three-plain-animator](https://www.npmjs.com/package/three-plain-animator)
+
 
     npm i three-plain-animator
 
 ## Usage
 There are two main classes to work with: 
 
- - plain-animator
- - plain-singular-animator
+ - PlainAnimator
+ - PlainSingularAnimator
  
  The first one is for continuous animations like walking. The second one is for animation that should play only once and then stop on the last frame of animation. 
 
@@ -46,7 +46,7 @@ These magic numbers are the follows:
 | 10 | total number of frames |
 | 15 | frames per second (fps) |
 
-Then the finall texture could be get using init() method:
+Then the final texture could be get using init() method:
 
     const texture = animator.init();
     
@@ -71,19 +71,21 @@ Full code:
 
 There is working code on  [stackblitz](https://stackblitz.com/edit/plain-animations) with this example: 
 
+## Docs
+
+Read docs [here](https://stackblitz.com/edit/plain-animations).
 
 ## Requierments
 
-The package requires threejs library r103
+The package requires threejs library
 
 ## Support
-The package supports TypeScript and it also contains typescript definitions. 
+The package supports TypeScript and contains typescript definitions. 
 
 ## Future work & TODO
 
- 1. More examples
- 2. GIF files support
- 3. Tests
+ 1. GIF files support
+ 2. Tests
 
 
 ##  

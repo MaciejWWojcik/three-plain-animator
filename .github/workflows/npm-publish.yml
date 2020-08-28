@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      - run: npm prepare
+      - run: npm run prepare
 
   publish-npm:
     needs: build
@@ -29,7 +29,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm prepublishOnly
+      - run: npm run prepublishOnly
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMTOKEN}}
 
@@ -43,6 +43,6 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
+      - run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUBTOKEN}}

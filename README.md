@@ -73,7 +73,7 @@ There is working code on  [stackblitz](https://stackblitz.com/edit/plain-animati
 
 ## Docs
 
-Read docs [here](https://stackblitz.com/edit/plain-animations).
+Read docs [here](https://maciejwwojcik.github.io/three-plain-animator).
 
 ## Requierments
 

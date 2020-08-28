@@ -10,7 +10,6 @@ import {
 } from 'three';
 import { PlainAnimator } from 'three-plain-animator/lib/plain-animator';
 
-
 let camera: OrthographicCamera;
 let renderer: WebGLRenderer;
 let animator: PlainAnimator;
@@ -19,7 +18,14 @@ function initScene() {
   const frustumSize = 1000;
   const scene = new Scene();
   const aspect = window.innerWidth / window.innerHeight;
-  camera = new OrthographicCamera(frustumSize * aspect / -2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / -2, 1, 2000);
+  camera = new OrthographicCamera(
+    (frustumSize * aspect) / -2,
+    (frustumSize * aspect) / 2,
+    frustumSize / 2,
+    frustumSize / -2,
+    1,
+    2000,
+  );
   renderer = new WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
@@ -54,5 +60,3 @@ const mesh = createAnimatedMesh();
 scene.add(mesh);
 
 animate();
-
-

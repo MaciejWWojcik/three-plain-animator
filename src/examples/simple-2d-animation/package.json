@@ -1,0 +1,21 @@
+{
+  "name": "example-simple-2d-animation",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "run": "npm run build",
+    "postrun": "npm run bundle",
+    "build": "tsc",
+    "bundle": "browserify src/scripts/index.js -o src/scripts/bundle.js"
+  },
+  "devDependencies": {
+    "typescript": "4.0.2",
+    "browserify": "16.5.2"
+  },
+  "dependencies": {
+    "@types/three": "0.103.2",
+    "dat.gui": "0.7.6",
+    "three": "0.120.0",
+    "three-plain-animator": "1.0.2"
+  }
+}

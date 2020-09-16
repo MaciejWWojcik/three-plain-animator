@@ -17,6 +17,7 @@ import { Clock, RepeatWrapping, Texture } from 'three';
 export class PlainAnimator {
   protected currentFrameDisplayTime: number = 0;
   protected currentFrame: number = 0;
+  protected currentFrameOffset: number = 0;
   protected clock: Clock = new Clock();
   protected end$: Subject<void> = new Subject<void>();
   protected readonly frameDisplayDuration: number;
@@ -28,6 +29,7 @@ export class PlainAnimator {
    * @param {number} tilesAmountVertically - number of rows in your sprite image
    * @param {number} tilesTotalAmount - number of frames in your sprite image
    * @param {number} framesPerSecond - number of frames per second, for example 15
+   * @param {number} frameOffset - number of frames to skip before the setting the initial frame, default 0
    */
   constructor(
     public texture: Texture,
@@ -35,12 +37,14 @@ export class PlainAnimator {
     protected tilesAmountVertically: number,
     protected tilesTotalAmount: number,
     framesPerSecond: number,
+    protected frameOffset: number,
   ) {
     this.tilesTotalAmount -= 1; // indexing from 0
     this.frameDisplayDuration = 1000 / framesPerSecond;
     this.texture.wrapS = RepeatWrapping;
     this.texture.wrapT = RepeatWrapping;
     this.texture.repeat.set(1 / tilesAmountHorizontally, 1 / tilesAmountVertically);
+    this.currentFrameOffset = frameOffset;
   }
 
   /**
@@ -48,7 +52,7 @@ export class PlainAnimator {
    * @param {number} startFrame - optional parameter for setting the start position of animation (frame number)
    * @return {Texture} a Texture object that will display animation
    */
-  public init(startFrame: number = 0): Texture {
+  public init(startFrame: number = this.currentFrameOffset): Texture {
     this.currentFrame = startFrame;
     this.currentFrameDisplayTime = 0;
     this.clock = new Clock();
@@ -90,9 +94,9 @@ export class PlainAnimator {
 
   protected updateFrame() {
     const tileHeight = 1 / this.tilesAmountVertically;
-
-    const currentColumn = this.currentFrame % this.tilesAmountHorizontally;
-    const currentRow = Math.floor(this.currentFrame / this.tilesAmountHorizontally);
+    const currentFrameWithOffset = this.currentFrame + this.currentFrameOffset
+    const currentColumn = currentFrameWithOffset % this.tilesAmountHorizontally;
+    const currentRow = Math.floor(currentFrameWithOffset / this.tilesAmountHorizontally);
 
     this.texture.offset.x = currentColumn / this.tilesAmountHorizontally;
     this.texture.offset.y = 1 - currentRow / this.tilesAmountVertically - tileHeight;

@@ -44,6 +44,6 @@
   },
   "dependencies": {
     "rxjs": "6.6.2",
-    "three": "0.120.0"
+    "three": "0.125.0"
   }
 }

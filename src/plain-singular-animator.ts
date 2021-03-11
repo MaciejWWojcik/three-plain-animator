@@ -25,6 +25,7 @@ export class PlainSingularAnimator extends PlainAnimator {
    * @param {number} tilesAmountVertically - number of rows in your sprite image
    * @param {number} tilesTotalAmount - number of frames in your sprite image
    * @param {number} framesPerSecond - number of frames per second, for example 15
+   * @param {number} frameOffset - number of frames to skip before the setting the initial frame, default 0
    */
   constructor(
     texture: Texture,
@@ -32,8 +33,9 @@ export class PlainSingularAnimator extends PlainAnimator {
     tilesAmountVertically: number,
     tilesTotalAmount: number,
     framesPerSecond: number,
+    framesOffset: number = 0,
   ) {
-    super(texture, tilesAmountHorizontally, tilesAmountVertically, tilesTotalAmount, framesPerSecond);
+    super(texture, tilesAmountHorizontally, tilesAmountVertically, tilesTotalAmount, framesPerSecond, framesOffset);
   }
 
   /**

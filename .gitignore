@@ -10,3 +10,5 @@ gen
 /lib
 */dist/
 /src/examples/*/node_modules
+/src/examples/simple-2d-animation/node_modules/
+/src/examples/simple-3d-animation/node_modules/

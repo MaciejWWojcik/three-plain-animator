@@ -1,6 +1,6 @@
 {
   "name": "three-plain-animator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "package for threejs to support plain animations generated from sprite textures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,10 +40,11 @@
     "prettier": "2.1.1",
     "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "4.0.2"
+    "typescript": "4.0.2",
+    "@types/three": "0.139.0"
   },
   "dependencies": {
     "rxjs": "6.6.2",
-    "three": "0.137.0"
+    "three": "0.139.0"
   }
 }

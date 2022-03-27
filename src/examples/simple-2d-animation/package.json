@@ -13,9 +13,9 @@
     "browserify": "16.5.2"
   },
   "dependencies": {
-    "@types/three": "0.103.2",
+    "@types/three": "0.139.0",
     "dat.gui": "0.7.6",
-    "three": "0.137.0",
-    "three-plain-animator": "1.0.2"
+    "three": "0.139.0",
+    "three-plain-animator": "1.0.7"
   }
 }

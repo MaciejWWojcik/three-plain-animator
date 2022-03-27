@@ -6,9 +6,9 @@ import {
   Scene,
   TextureLoader,
   WebGLRenderer,
-  Color
-} from "three";
-import { PlainAnimator } from "three-plain-animator";
+  Color,
+} from 'three';
+import { PlainAnimator } from 'three-plain-animator';
 
 let camera: OrthographicCamera;
 let renderer: WebGLRenderer;
@@ -24,12 +24,12 @@ function initScene() {
     frustumSize / 2,
     frustumSize / -2,
     1,
-    2000
+    2000,
   );
   renderer = new WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  scene.background = new Color("#1976D2");
+  scene.background = new Color('#1976D2');
   camera.position.z = 10;
   return scene;
 }
@@ -41,7 +41,7 @@ function animate(timestamp?: number) {
 }
 
 function createAnimatedMesh() {
-  const texturePath = "textures/texture.png";
+  const texturePath = 'textures/texture.png';
   /* @ts-ignore due to type errors from using PlanAnimator from local files, not from node_modules */
   animator = new PlainAnimator(new TextureLoader().load(texturePath), 4, 4, 10, 10);
 

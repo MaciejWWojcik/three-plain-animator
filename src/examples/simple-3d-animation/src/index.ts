@@ -6,9 +6,9 @@ import {
   OrthographicCamera,
   Scene,
   TextureLoader,
-  WebGLRenderer,
-} from 'three';
-import { PlainAnimator } from 'three-plain-animator/lib/plain-animator';
+  WebGLRenderer
+} from "three";
+import { PlainAnimator } from "../../../plain-animator";
 
 let camera: OrthographicCamera;
 let renderer: WebGLRenderer;
@@ -24,12 +24,12 @@ function initScene() {
     frustumSize / 2,
     frustumSize / -2,
     1,
-    2000,
+    2000
   );
   renderer = new WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  scene.background = new Color('#e2cd39');
+  scene.background = new Color("#e2cd39");
   camera.position.z = 1000;
   return scene;
 }
@@ -42,7 +42,7 @@ function animate(timestamp?) {
 }
 
 function createAnimatedMesh() {
-  const texturePath = 'textures/homer.png';
+  const texturePath = "textures/homer.png";
   /* @ts-ignore due to type errors from using PlanAnimator from local files, not from node_modules */
   animator = new PlainAnimator(new TextureLoader().load(texturePath), 4, 4, 10, 10);
 

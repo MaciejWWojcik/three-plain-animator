@@ -43,7 +43,7 @@
     "typescript": "4.0.2",
     "@types/three": "0.139.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "rxjs": "6.6.2",
     "three": "0.139.0"
   }

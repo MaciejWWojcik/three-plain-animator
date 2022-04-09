@@ -16,6 +16,6 @@
     "@types/three": "0.139.0",
     "dat.gui": "^0.7.9",
     "three": "0.139.0",
-    "three-plain-animator": "1.0.8"
+    "three-plain-animator": "1.1.1"
   }
 }

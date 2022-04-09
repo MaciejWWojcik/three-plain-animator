@@ -27031,8 +27031,7 @@
               _isContextLost = true;
             }
 
-            function /* event */
-            onContextRestore() {
+            function /* event */ onContextRestore() {
               console.log('THREE.WebGLRenderer: Context Restored.');
               _isContextLost = false;
               const infoAutoReset = info.autoReset;

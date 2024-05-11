@@ -42,8 +42,13 @@ Next step is about creating the animator object:
      const animator =  new  PlainAnimator(spriteTexture, 4, 4, 10, 15);
 
 These magic numbers are the follows:
-|value| description | |--|--| | 4 | number of frames horizontally | | 4 | number of frames vertically | | 10 | total
-number of frames | | 15 | frames per second (fps) |
+
+| value | description                   |
+|-------|-------------------------------|
+| 4     | number of frames horizontally |
+| 4     | number of frames vertically   |
+| 10    | total number of frames        |
+| 15    | frames per second (fps)       |
 
 Then the final texture could be get using init() method:
 
